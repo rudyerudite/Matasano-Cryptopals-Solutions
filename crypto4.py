@@ -18,7 +18,7 @@ def xor(line):
 			s=CAP.get(r[i],0)
 			if(s==0):
 				s=SML.get(r[i],0)
-		if(r.isprintable()):
+		if(r.isprintable()):			#to be edited use anothe fn other than isprintable to check
 			print(r)
 			k.append(r)
 		return s
@@ -31,5 +31,5 @@ if(x==0):
 		c+=1
 		m=xor(line)
 		if(m>p):
-			p=m
+			p=m				#to be used somewehre else
 print(s[p])
