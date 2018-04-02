@@ -2,8 +2,7 @@ s= raw_input()
 import binascii
 
 block=q=""
-flag=i=j=1
-l=1
+flag=1
 print("Original length is:"+str(len(s)))
 while(flag!=0):
 	l=len(s)
