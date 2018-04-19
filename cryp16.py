@@ -18,8 +18,6 @@ def preapnd(instr):#appending and prepending the input with random strings and t
 	instr=instr.replace(';','?').replace('=','?')
 	str1="comment1=cooking%20MCs;userdata="
 	str2=";comment2=!20like!20a%20pound!20of%20bacon"
-	ash=str1+instr+str2
-	print(ash[32])
 	str1=obj.encrypt(pkcs(str1+instr+str2,16))
 	
 	return str1		#returns a string that has been encrypted and padded
