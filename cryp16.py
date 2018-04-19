@@ -42,10 +42,7 @@ def exploit(inp):
 	ct[22]=chr(ord(ct[22])^ord('?')^ord('='))
 	ct[27]=chr(ord(ct[27])^ord('?')^ord(';'))
 	ctnw="".join(ct)
-	'''for i in range(len(f)) :
-		if(f[i]!=ctnw[i]):
-			print(ctnw[i],f[i])
-			print("Ron's stupidity!")'''																						
+																						
 	k=check(ctnw)
 	if(k==True):
 		print("Alohomora")
