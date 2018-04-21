@@ -14,15 +14,13 @@ def encrcbc(pt,bs):
 def decrcbc(ct,bs):
 	k=len(ct)
 	l=[]
-	ct1=ct+"\x00"*16+ct #using a null string as my guessed string
-	#I'm not padding it b4 decryption
+	ct1=ct+"\x00"*16+ct #using a null string as my guessed ciphertext block string
+			    #I'm not padding it b4 decryption of the combined strings
 	obj=AES.new(key,AES.MODE_CBC,IV)
 	pt1=obj.decrypt(ct1)
-	#print(chr(ord(pt1[0])^ord(pt1[k+16])^ord(ct1[k])))
 	l=[chr(ord(a)^ord(b)) for a,b in zip(pt1[:16],pt1[16+k:])]
 	hg="".join(l)
-	print(hg,"\ndumbledore",IV)
-	if(IV==hg):
+	if(IV==hg):	   #comparing predicted IV with actual one
 		print("You got the snitch!")
 	else:
 		print("Slytherin gets a point")
