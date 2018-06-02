@@ -8,6 +8,6 @@ nonce=struct.pack("<Q",nonce).encode("hex") #applying little endian format || o/
 print (nonce)
 ctr=Crypto.Util.Counter.new(128, initial_value=nonce) #when not usinng this prompting error counter must be a callable object
 obj=AES.new(key,AES.MODE_CTR,counter=ctr) #counter keyword is necessary
-print(obj.decrypt(ct)) #not giving me out the  whole text correctly
+print(obj.decrypt(ct)) #not giving me out the  whole text correctly Yo, VIP Let's ki�g�[�~g�ﲇ�Bh�*�	�!����5��8�e��
 
 
