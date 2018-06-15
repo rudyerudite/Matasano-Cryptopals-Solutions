@@ -1,3 +1,5 @@
+'''Well, one might not get all the characters of the shortened ciphertext correct but you can modify the precentage of ascii and punctuation and get the other ones in the function freA'''
+
 from Crypto.Cipher import AES
 import Crypto.Util.Counter 
 import os
