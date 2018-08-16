@@ -10,11 +10,11 @@ m=int(math.sqrt(p-1)+1)
 
 l=[]
 for i in range(0,m):#why is the limit m?
-	l.append(a**(i*m))#root m number of possibilities
+	l.append(pow(a,i*m,p)#root m number of possibilities
 
 for j in range(0,m):
 	for k in range(m):
-		if((b*inverse(a**j,p))%p in l):
+		if(pow(b*inverse(pow(a,j),1,p)) in l):
 			break
 	break
 x=j*m+k
