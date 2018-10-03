@@ -1,7 +1,7 @@
 import binascii
 
 def detect(data):
-	#aim is to divide data into blocks and see whether there's any block similiar to it...so first find number of blocks
+	# The aim is to divide data into blocks and see whether there's any block similiar to it...so first find number of blocks
 	n=len(data)/16
 	print(" number of blocks are present :"+str(n/10))
 	for i in range(n):
